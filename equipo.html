@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoNova - Equipo</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Lato', sans-serif;
+      background: #ffffff;
+      color: #1d2d1d;
+    }
+    header {
+      background: #2d8659;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #fff;
+    }
+    nav a {
+      color: white;
+      margin-left: 1.5rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover { text-decoration: underline; }
+    
+    /* Sección Equipo */
+    .equipo {
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+    .equipo h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #1b4332;
+    }
+    .personas {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .card {
+      background: #f5fdf8;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .card img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1rem;
+    }
+    .card h3 {
+      margin: 0.5rem 0;
+      color: #2d8659;
+    }
+    .card p {
+      font-size: 0.95rem;
+      line-height: 1.4;
+    }
+    footer {
+      background: #2d8659;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>EcoNova</h1>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="equipo.html">Equipo</a>
+      <a href="servicios.html">Servicios</a>
+      <a href="proyectos.html">Proyectos</a>
+      <a href="recursos.html">Recursos</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+  </header>
+
+  <!-- Sección Equipo -->
+  <section class="equipo">
+    <h2>Nuestro Equipo</h2>
+    <p>Conoce a los 4 fundadores de EcoNova, estudiantes de Abat Oliba que creen en un futuro sostenible.</p>
+
+    <div class="personas">
+      <!-- Miembro 1 -->
+      <div class="card">
+        <img src="https://via.placeholder.com/120" alt="Foto miembro 1">
+        <h3>Nombre 1</h3>
+        <p><strong>Rol:</strong> Marketing & Comunicación</p>
+        <p>Encargado de dar visibilidad a EcoNova y conectar con los clientes.</p>
+      </div>
+
+      <!-- Miembro 2 -->
+      <div class="card">
+        <img src="https://via.placeholder.com/120" alt="Foto miembro 2">
+        <h3>Nombre 2</h3>
+        <p><strong>Rol:</strong> Ingeniería</p>
+        <p>Diseña soluciones energéticas innovadoras y eficientes.</p>
+      </div>
+
+      <!-- Miembro 3 -->
+      <div class="card">
+        <img src="https://via.placeholder.com/120" alt="Foto miembro 3">
+        <h3>Nombre 3</h3>
+        <p><strong>Rol:</strong> Finanzas</p>
+        <p>Gestiona recursos e inversiones para garantizar la viabilidad de los proyectos.</p>
+      </div>
+
+      <!-- Miembro 4 -->
+      <div class="card">
+        <img src="https://via.placeholder.com/120" alt="Foto miembro 4">
+        <h3>Nombre 4</h3>
+        <p><strong>Rol:</strong> Estrategia & Innovación</p>
+        <p>Define el rumbo de EcoNova y explora nuevas oportunidades verdes.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 EcoNova · Energía limpia para un futuro sostenible</p>
+  </footer>
+
+</body>
+</html>
