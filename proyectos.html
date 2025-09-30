@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoNova - Proyectos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Lato', sans-serif;
+      background: #ffffff;
+      color: #1d2d1d;
+    }
+    header {
+      background: #2d8659;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #fff;
+    }
+    header h1 {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+    }
+    nav a {
+      color: white;
+      margin-left: 1.5rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover { text-decoration: underline; }
+
+    /* Hero Section */
+    .hero {
+      background: #e6f7f0;
+      text-align: center;
+      padding: 4rem 2rem;
+    }
+    .hero h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #1b4332;
+    }
+    .hero p {
+      max-width: 600px;
+      margin: auto;
+      font-size: 1.1rem;
+    }
+
+    /* Contenido */
+    .contenido {
+      padding: 3rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .contenido h3 {
+      color: #2d8659;
+      margin-bottom: 1rem;
+    }
+    .contenido p {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+
+    /* Proyectos en tarjetas */
+    .proyectos {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas grandes */
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+    @media (max-width: 800px) {
+      .proyectos {
+        grid-template-columns: 1fr; /* 1 columna en pantallas pequeñas */
+      }
+    }
+    .card {
+      background: #f5fdf8;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+      text-align: center;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .card img {
+      width: 60px;
+      margin-bottom: 1rem;
+    }
+    .card h4 {
+      margin-bottom: 0.5rem;
+      color: #2d8659;
+    }
+
+    /* Footer */
+    footer {
+      background: #2d8659;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+
+    /* Botón */
+    .btn {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.8rem 1.5rem;
+      background-color: #2d8659;
+      color: white;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .btn:hover {
+      background-color: #256947;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>EcoNova</h1>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="equipo.html">Equipo</a>
+      <a href="renovables.html">Energías</a>
+      <a href="servicios.html">Servicios</a>
+      <a href="proyectos.html">Proyectos</a>
+      <a href="#">Recursos</a>
+      <a href="#">Contacto</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h2>Proyectos de energía sostenible</h2>
+    <p>Descubre algunos de los proyectos que implementamos para empresas, garantizando eficiencia, sostenibilidad y resultados medibles.</p>
+  </section>
+
+  <!-- Contenido -->
+  <section class="contenido">
+    <h3>Proyectos destacados</h3>
+    <div class="proyectos">
+      <div class="card">
+        <img src="https://img.icons8.com/ios-filled/100/2d8659/solar-panel.png" alt="Proyecto Solar">
+        <h4>Planta Solar Industrial</h4>
+        <p>Instalación de paneles solares en una nave industrial, cubriendo el 70% del consumo energético. Seguimiento mensual para asegurar rendimiento y ahorro.</p>
+      </div>
+      <div class="card">
+        <img src="https://img.icons8.com/ios-filled/100/2d8659/wind-turbine.png" alt="Proyecto Eólico">
+        <h4>Mini Parque Eólico Empresarial</h4>
+        <p>Implementación de turbinas eólicas para generar energía limpia en oficinas corporativas. Supervisión trimestral y mantenimiento preventivo.</p>
+      </div>
+      <div class="card">
+        <img src="https://img.icons8.com/ios-filled/100/2d8659/leaf.png" alt="Proyecto Híbrido">
+        <h4>Sistema Híbrido Solar + Eólico</h4>
+        <p>Combinación de paneles solares y turbinas eólicas para reducir la dependencia de la red eléctrica. Control de eficiencia energética en tiempo real.</p>
+      </div>
+      <div class="card">
+        <img src="https://img.icons8.com/ios-filled/100/2d8659/maintenance.png" alt="Proyecto de Optimización">
+        <h4>Optimización Energética Integral</h4>
+        <p>Auditoría completa y modernización de sistemas de energía existentes en empresas, con implementación de soluciones sostenibles y monitorización constante.</p>
+      </div>
+    </div>
+
+    <h3>Cómo garantizamos el cumplimiento</h3>
+    <p>En EcoNova nos aseguramos de que todos los proyectos se ejecuten correctamente mediante:</p>
+    <ul>
+      <li>Planificación detallada y cronogramas claros para cada fase del proyecto.</li>
+      <li>Supervisión continua con reportes periódicos a los clientes.</li>
+      <li>Uso de tecnología avanzada para monitorizar eficiencia y producción energética.</li>
+      <li>Mantenimiento preventivo y soporte técnico constante para asegurar resultados duraderos.</li>
+      <li>Capacitación al personal de la empresa para un uso eficiente de los sistemas.</li>
+    </ul>
+
+    <a href="contacto.html" class="btn">Contacta con nosotros</a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 EcoNova · Energía limpia para un futuro sostenible</p>
+  </footer>
+
+</body>
+</html>
