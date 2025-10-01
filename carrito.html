@@ -3,102 +3,140 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Carrito de Compra - EcoEnergy</title>
+  <title>Carrito de Compra - EcoNova</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@700&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       font-family: 'Lato', sans-serif;
       color: #1d2d1d;
-      background-color: #ffffff;
+      background-color: #f5fdf8;
     }
 
     header {
-      background: #009879;
+      background-color: #2d8659;
       color: #fff;
-      padding: 10px 20px;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
     header h1 {
       margin: 0;
-      display: inline-block;
-    }
-
-    nav {
-      float: right;
-      margin-top: 5px;
+      font-family: 'Montserrat', sans-serif;
     }
 
     nav a {
       color: #fff;
       text-decoration: none;
-      margin-left: 20px;
+      margin-left: 1.5rem;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
     }
 
-    .products, .cart {
-      background: #fff;
-      margin: 20px auto;
-      padding: 20px;
-      max-width: 900px;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    main {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 2rem;
+    }
+
+    h2 {
+      color: #2d8659;
+      margin-bottom: 1rem;
+      text-align: center;
     }
 
     .product-list {
       display: flex;
       flex-wrap: wrap;
       gap: 20px;
+      justify-content: center;
+      margin-bottom: 2rem;
     }
 
     .product {
-      border: 1px solid #ddd;
-      padding: 15px;
-      flex: 1 1 calc(33.3% - 20px);
-      box-sizing: border-box;
-      border-radius: 5px;
+      background: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 1rem;
+      width: 280px;
+      text-align: center;
     }
 
     .product h3 {
-      margin-top: 0;
+      margin: 0.5rem 0;
     }
 
-    .product .price {
-      display: block;
+    .price {
       font-weight: bold;
-      margin-bottom: 10px;
+      margin: 0.5rem 0;
+      color: #256947;
+      font-size: 1.1rem;
     }
 
-    button {
-      background: #009879;
-      color: #fff;
+    button.add-to-cart {
+      background-color: #2d8659;
+      color: white;
       border: none;
-      padding: 8px 12px;
+      padding: 0.6rem 1rem;
+      border-radius: 6px;
       cursor: pointer;
-      border-radius: 4px;
+      font-weight: bold;
     }
-
-    button:hover {
-      background: #007f65;
+    button.add-to-cart:hover {
+      background-color: #256947;
     }
 
     table {
       width: 100%;
       border-collapse: collapse;
-      margin-top: 10px;
+      margin-top: 1rem;
+      background: #ffffff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
 
     table th, table td {
-      border: 1px solid #ddd;
-      padding: 10px;
+      border-bottom: 1px solid #ddd;
+      padding: 12px;
       text-align: center;
+    }
+    table th {
+      background-color: #2d8659;
+      color: white;
     }
 
     .cart-total {
       text-align: right;
-      margin-top: 20px;
+      margin-top: 1rem;
     }
 
     .cart-total button {
+      background-color: #2d8659;
+      color: white;
+      border: none;
+      padding: 0.6rem 1rem;
       margin-left: 10px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .cart-total button:hover {
+      background-color: #256947;
+    }
+
+    @media (max-width: 800px) {
+      .product-list {
+        flex-direction: column;
+        align-items: center;
+      }
+      table th, table td {
+        padding: 8px;
+      }
     }
   </style>
 </head>
@@ -115,32 +153,32 @@
   <main>
     <!-- Sección de productos -->
     <section class="products">
-      <h2>Productos</h2>
+      <h2>Productos y Servicios</h2>
       <div class="product-list">
         <div class="product">
           <h3>Placa Solar 500W</h3>
           <p>Alta eficiencia, instalación incluida</p>
-          <span class="price">450 €</span>
-          <button class="add-to-cart" data-name="Placa Solar 500W" data-price="450">Añadir al carrito</button>
+          <span class="price">550 €</span>
+          <button class="add-to-cart" data-name="Placa Solar 500W" data-price="550">Añadir al carrito</button>
         </div>
         <div class="product">
           <h3>Mini Aerogenerador 2kW</h3>
           <p>Perfecto para autoconsumo</p>
-          <span class="price">1200 €</span>
-          <button class="add-to-cart" data-name="Mini Aerogenerador 2kW" data-price="1200">Añadir al carrito</button>
+          <span class="price">1500 €</span>
+          <button class="add-to-cart" data-name="Mini Aerogenerador 2kW" data-price="1500">Añadir al carrito</button>
         </div>
         <div class="product">
           <h3>Kit Híbrido Solar + Eólico</h3>
           <p>La mejor combinación para tu hogar</p>
-          <span class="price">2500 €</span>
-          <button class="add-to-cart" data-name="Kit Híbrido Solar + Eólico" data-price="2500">Añadir al carrito</button>
+          <span class="price">3000 €</span>
+          <button class="add-to-cart" data-name="Kit Híbrido Solar + Eólico" data-price="3000">Añadir al carrito</button>
         </div>
       </div>
     </section>
 
     <!-- Sección del carrito -->
     <section class="cart">
-      <h2>Carrito de compra</h2>
+      <h2>Carrito de Compra</h2>
       <table>
         <thead>
           <tr>
@@ -194,7 +232,6 @@
       localStorage.setItem('cart', JSON.stringify(cart));
     }
 
-    // Añadir al carrito
     document.querySelectorAll('.add-to-cart').forEach(btn => {
       btn.addEventListener('click', () => {
         const name = btn.dataset.name;
@@ -209,7 +246,6 @@
       });
     });
 
-    // Cambiar cantidad y eliminar item
     document.getElementById('cart-items').addEventListener('input', e => {
       if (e.target.classList.contains('quantity-input')) {
         const index = e.target.dataset.index;
@@ -226,23 +262,21 @@
       }
     });
 
-    // Vaciar carrito
     document.getElementById('clear-cart').addEventListener('click', () => {
       cart = [];
       updateCart();
     });
 
-    // Finalizar compra (simulación)
     document.getElementById('checkout').addEventListener('click', () => {
       alert('¡Gracias por tu compra! (Aquí iría la integración con pasarela de pago)');
       cart = [];
       updateCart();
     });
 
-    // Inicializar
     updateCart();
   </script>
 </body>
 </html>
+
 
 
