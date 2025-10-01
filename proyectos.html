@@ -4,9 +4,104 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>EcoNova - Proyectos</title>
-  <link href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@700&display=swap" rel="stylesheet">
-  <!-- Enlazamos CSS común -->
-  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Lato', sans-serif;
+      background-color: #ffffff;
+      color: #1d2d1d;
+    }
+
+    /* Header */
+    header {
+      background-color: #2d8659;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #fff;
+    }
+
+    header h1 {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    nav a {
+      color: white;
+      margin-left: 1.5rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover { text-decoration: underline; }
+
+    nav .cart-link {
+      margin-left: 3rem;
+    }
+
+    nav .cart-link img {
+      vertical-align: middle;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: #e6f7f0;
+      text-align: center;
+      padding: 3rem 2rem;
+    }
+
+    .hero h2 {
+      font-size: 2rem;
+      color: #1b4332;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    /* Proyectos */
+    .proyectos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      padding: 3rem 2rem;
+    }
+
+    .proyecto-card {
+      background: #f5fdf8;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+
+    .proyecto-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .proyecto-card h3 {
+      margin-top: 0;
+      color: #2d8659;
+    }
+
+    .proyecto-card p {
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    /* Footer */
+    footer {
+      background: #2d8659;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+  </style>
 </head>
 <body>
 
@@ -26,49 +121,38 @@
     </nav>
   </header>
 
-  <!-- Hero -->
+<!-- Hero -->
   <section class="hero">
-    <h2>Proyectos de energía sostenible</h2>
-    <p>Descubre algunos de los proyectos que implementamos para empresas, garantizando eficiencia, sostenibilidad y resultados medibles.</p>
+    <h2>Nuestros Proyectos</h2>
+    <p>En EcoNova desarrollamos proyectos de energía limpia que ayudan a las empresas a reducir su huella de carbono y adoptar soluciones sostenibles adaptadas a sus necesidades.</p>
   </section>
 
-  <!-- Contenido -->
-  <section class="contenido">
-    <h3>Proyectos destacados</h3>
-    <div class="proyectos">
-      <div class="card">
-        <img src="https://img.icons8.com/ios-filled/100/2d8659/solar-panel.png" alt="Proyecto Solar">
-        <h4>Planta Solar Industrial</h4>
-        <p>Instalación de paneles solares en una nave industrial, cubriendo el 70% del consumo energético. Seguimiento mensual para asegurar rendimiento y ahorro.</p>
-      </div>
-      <div class="card">
-        <img src="https://img.icons8.com/ios-filled/100/2d8659/wind-turbine.png" alt="Proyecto Eólico">
-        <h4>Mini Parque Eólico Empresarial</h4>
-        <p>Implementación de turbinas eólicas para generar energía limpia en oficinas corporativas. Supervisión trimestral y mantenimiento preventivo.</p>
-      </div>
-      <div class="card">
-        <img src="https://img.icons8.com/ios-filled/100/2d8659/leaf.png" alt="Proyecto Híbrido">
-        <h4>Sistema Híbrido Solar + Eólico</h4>
-        <p>Combinación de paneles solares y turbinas eólicas para reducir la dependencia de la red eléctrica. Control de eficiencia energética en tiempo real.</p>
-      </div>
-      <div class="card">
-        <img src="https://img.icons8.com/ios-filled/100/2d8659/maintenance.png" alt="Proyecto de Optimización">
-        <h4>Optimización Energética Integral</h4>
-        <p>Auditoría completa y modernización de sistemas de energía existentes en empresas, con implementación de soluciones sostenibles y monitorización constante.</p>
-      </div>
+  <!-- Sección Proyectos -->
+  <section class="proyectos">
+    <div class="proyecto-card">
+      <h3>Instalación Solar Corporativa</h3>
+      <p>Implementación de paneles solares en la sede de una empresa industrial. Monitorizamos la producción de energía y optimizamos el consumo, asegurando un retorno de inversión en 4 años.</p>
     </div>
 
-    <h3>Cómo garantizamos el cumplimiento</h3>
-    <p>En EcoNova nos aseguramos de que todos los proyectos se ejecuten correctamente mediante:</p>
-    <ul>
-      <li>Planificación detallada y cronogramas claros para cada fase del proyecto.</li>
-      <li>Supervisión continua con reportes periódicos a los clientes.</li>
-      <li>Uso de tecnología avanzada para monitorizar eficiencia y producción energética.</li>
-      <li>Mantenimiento preventivo y soporte técnico constante para asegurar resultados duraderos.</li>
-      <li>Capacitación al personal de la empresa para un uso eficiente de los sistemas.</li>
-    </ul>
+    <div class="proyecto-card">
+      <h3>Parque Eólico Comunitario</h3>
+      <p>Diseño y ejecución de un parque eólico para abastecer de energía a varias comunidades. Se realiza un seguimiento de impacto ambiental y eficiencia energética durante todo el proyecto.</p>
+    </div>
 
-    <a href="contacto.html" class="btn">Contacta con nosotros</a>
+    <div class="proyecto-card">
+      <h3>Sistema Híbrido Solar + Eólico</h3>
+      <p>Solución combinada para empresas con alta demanda energética. Se optimiza la integración de ambas tecnologías para asegurar suministro estable y sostenible.</p>
+    </div>
+
+    <div class="proyecto-card">
+      <h3>Consultoría de Energía Sostenible</h3>
+      <p>Auditoría energética completa y diseño de estrategias de reducción de consumo. Proporcionamos un plan personalizado de implementación de energías renovables y ahorro económico.</p>
+    </div>
+
+    <div class="proyecto-card">
+      <h3>Infraestructura Verde en Oficinas</h3>
+      <p>Instalación de techos verdes, iluminación LED y sistemas de eficiencia hídrica. Medimos los resultados y asesoramos sobre certificaciones de sostenibilidad.</p>
+    </div>
   </section>
 
   <!-- Footer -->
