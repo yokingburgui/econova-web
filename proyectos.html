@@ -8,8 +8,8 @@
     body {
       margin: 0;
       font-family: 'Lato', sans-serif;
-      background-color: #ffffff;
       color: #1d2d1d;
+      background-color: #ffffff;
     }
 
     /* Header */
@@ -34,7 +34,9 @@
       font-weight: bold;
     }
 
-    nav a:hover { text-decoration: underline; }
+    nav a:hover {
+      text-decoration: underline;
+    }
 
     nav .cart-link {
       margin-left: 3rem;
@@ -44,30 +46,45 @@
       vertical-align: middle;
     }
 
-    /* Hero Section */
+    /* Hero */
     .hero {
       background: #e6f7f0;
       text-align: center;
-      padding: 3rem 2rem;
+      padding: 4rem 2rem;
     }
 
     .hero h2 {
       font-size: 2rem;
-      color: #1b4332;
       margin-bottom: 1rem;
+      color: #1b4332;
     }
 
     .hero p {
-      font-size: 1.1rem;
       max-width: 700px;
       margin: auto;
+      font-size: 1.1rem;
     }
 
-    /* Proyectos */
+    .btn {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.8rem 1.5rem;
+      background-color: #2d8659;
+      color: white;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      background-color: #256947;
+    }
+
+    /* Sección Proyectos */
     .proyectos {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       padding: 3rem 2rem;
     }
 
@@ -76,6 +93,9 @@
       padding: 1.5rem;
       border-radius: 10px;
       box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      margin-bottom: 2rem;
+      max-width: 800px;
+      width: 100%;
       transition: transform 0.2s;
     }
 
@@ -84,12 +104,12 @@
     }
 
     .proyecto-card h3 {
-      margin-top: 0;
       color: #2d8659;
+      margin-top: 0;
     }
 
     .proyecto-card p {
-      font-size: 0.95rem;
+      font-size: 1rem;
       line-height: 1.5;
     }
 
@@ -124,34 +144,34 @@
 <!-- Hero -->
   <section class="hero">
     <h2>Nuestros Proyectos</h2>
-    <p>En EcoNova desarrollamos proyectos de energía limpia que ayudan a las empresas a reducir su huella de carbono y adoptar soluciones sostenibles adaptadas a sus necesidades.</p>
+    <p>EcoNova desarrolla proyectos sostenibles de energía limpia, adaptados a las necesidades de cada empresa y garantizando eficiencia y sostenibilidad.</p>
   </section>
 
-  <!-- Sección Proyectos -->
+  <!-- Proyectos -->
   <section class="proyectos">
     <div class="proyecto-card">
       <h3>Instalación Solar Corporativa</h3>
-      <p>Implementación de paneles solares en la sede de una empresa industrial. Monitorizamos la producción de energía y optimizamos el consumo, asegurando un retorno de inversión en 4 años.</p>
+      <p>Implementación de paneles solares en la sede de una empresa industrial, con seguimiento de producción energética y optimización del consumo. Retorno de inversión estimado en 4 años.</p>
     </div>
 
     <div class="proyecto-card">
       <h3>Parque Eólico Comunitario</h3>
-      <p>Diseño y ejecución de un parque eólico para abastecer de energía a varias comunidades. Se realiza un seguimiento de impacto ambiental y eficiencia energética durante todo el proyecto.</p>
+      <p>Diseño y ejecución de un parque eólico para abastecer varias comunidades. Seguimiento de impacto ambiental y eficiencia energética durante toda la ejecución del proyecto.</p>
     </div>
 
     <div class="proyecto-card">
       <h3>Sistema Híbrido Solar + Eólico</h3>
-      <p>Solución combinada para empresas con alta demanda energética. Se optimiza la integración de ambas tecnologías para asegurar suministro estable y sostenible.</p>
+      <p>Combinación de energía solar y eólica para empresas con alta demanda energética. Optimización de la integración tecnológica para un suministro estable y sostenible.</p>
     </div>
 
     <div class="proyecto-card">
       <h3>Consultoría de Energía Sostenible</h3>
-      <p>Auditoría energética completa y diseño de estrategias de reducción de consumo. Proporcionamos un plan personalizado de implementación de energías renovables y ahorro económico.</p>
+      <p>Auditoría energética completa y diseño de estrategias de reducción de consumo. Plan personalizado de implementación de energías renovables y ahorro económico.</p>
     </div>
 
     <div class="proyecto-card">
       <h3>Infraestructura Verde en Oficinas</h3>
-      <p>Instalación de techos verdes, iluminación LED y sistemas de eficiencia hídrica. Medimos los resultados y asesoramos sobre certificaciones de sostenibilidad.</p>
+      <p>Instalación de techos verdes, iluminación LED y sistemas de eficiencia hídrica. Seguimiento de resultados y asesoramiento sobre certificaciones de sostenibilidad.</p>
     </div>
   </section>
 
@@ -162,6 +182,7 @@
 
 </body>
 </html>
+
 
 
 
