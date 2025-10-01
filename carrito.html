@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrito de Compra - EcoEnergy</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background: #009879;
+      color: #fff;
+      padding: 10px 20px;
+    }
+
+    header h1 {
+      margin: 0;
+      display: inline-block;
+    }
+
+    nav {
+      float: right;
+      margin-top: 5px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 20px;
+    }
+
+    .products, .cart {
+      background: #fff;
+      margin: 20px auto;
+      padding: 20px;
+      max-width: 900px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .product-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .product {
+      border: 1px solid #ddd;
+      padding: 15px;
+      flex: 1 1 calc(33.3% - 20px);
+      box-sizing: border-box;
+      border-radius: 5px;
+    }
+
+    .product h3 {
+      margin-top: 0;
+    }
+
+    .product .price {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    button {
+      background: #009879;
+      color: #fff;
+      border: none;
+      padding: 8px 12px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    button:hover {
+      background: #007f65;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    table th, table td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .cart-total {
+      text-align: right;
+      margin-top: 20px;
+    }
+
+    .cart-total button {
+      margin-left: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>EcoEnergy</h1>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="servicios.html">Servicios</a>
+      <a href="carrito.html">Carrito (<span id="cart-count">0</span>)</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Sección de productos -->
+    <section class="products">
+      <h2>Productos</h2>
+      <div class="product-list">
+        <div class="product">
+          <h3>Placa Solar 500W</h3>
+          <p>Alta eficiencia, instalación incluida</p>
+          <span class="price">450 €</span>
+          <button class="add-to-cart" data-name="Placa Solar 500W" data-price="450">Añadir al carrito</button>
+        </div>
+        <div class="product">
+          <h3>Mini Aerogenerador 2kW</h3>
+          <p>Perfecto para autoconsumo</p>
+          <span class="price">1200 €</span>
+          <button class="add-to-cart" data-name="Mini Aerogenerador 2kW" data-price="1200">Añadir al carrito</button>
+        </div>
+        <div class="product">
+          <h3>Kit Híbrido Solar + Eólico</h3>
+          <p>La mejor combinación para tu hogar</p>
+          <span class="price">2500 €</span>
+          <button class="add-to-cart" data-name="Kit Híbrido Solar + Eólico" data-price="2500">Añadir al carrito</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección del carrito -->
+    <section class="cart">
+      <h2>Carrito de compra</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Producto</th>
+            <th>Cantidad</th>
+            <th>Precio</th>
+            <th>Total</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="cart-items">
+          <!-- Aquí se insertan los items del carrito -->
+        </tbody>
+      </table>
+      <div class="cart-total">
+        <h3>Total: <span id="cart-total">0 €</span></h3>
+        <button id="clear-cart">Vaciar carrito</button>
+        <button id="checkout">Finalizar compra</button>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    function updateCart() {
+      const cartItems = document.getElementById('cart-items');
+      const cartCount = document.getElementById('cart-count');
+      const cartTotal = document.getElementById('cart-total');
+
+      cartItems.innerHTML = '';
+      let total = 0;
+      cart.forEach((item, index) => {
+        const itemTotal = item.price * item.quantity;
+        total += itemTotal;
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+          <td>${item.name}</td>
+          <td>
+            <input type="number" value="${item.quantity}" min="1" data-index="${index}" class="quantity-input">
+          </td>
+          <td>${item.price} €</td>
+          <td>${itemTotal} €</td>
+          <td><button class="remove-item" data-index="${index}">X</button></td>
+        `;
+        cartItems.appendChild(tr);
+      });
+
+      cartCount.textContent = cart.length;
+      cartTotal.textContent = total.toFixed(2) + ' €';
+      localStorage.setItem('cart', JSON.stringify(cart));
+    }
+
+    // Añadir al carrito
+    document.querySelectorAll('.add-to-cart').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const name = btn.dataset.name;
+        const price = parseFloat(btn.dataset.price);
+        const existing = cart.find(item => item.name === name);
+        if (existing) {
+          existing.quantity++;
+        } else {
+          cart.push({ name, price, quantity: 1 });
+        }
+        updateCart();
+      });
+    });
+
+    // Cambiar cantidad y eliminar item
+    document.getElementById('cart-items').addEventListener('input', e => {
+      if (e.target.classList.contains('quantity-input')) {
+        const index = e.target.dataset.index;
+        cart[index].quantity = parseInt(e.target.value);
+        updateCart();
+      }
+    });
+
+    document.getElementById('cart-items').addEventListener('click', e => {
+      if (e.target.classList.contains('remove-item')) {
+        const index = e.target.dataset.index;
+        cart.splice(index, 1);
+        updateCart();
+      }
+    });
+
+    // Vaciar carrito
+    document.getElementById('clear-cart').addEventListener('click', () => {
+      cart = [];
+      updateCart();
+    });
+
+    // Finalizar compra (simulación)
+    document.getElementById('checkout').addEventListener('click', () => {
+      alert('¡Gracias por tu compra! (Aquí iría la integración con pasarela de pago)');
+      cart = [];
+      updateCart();
+    });
+
+    // Inicializar
+    updateCart();
+  </script>
+</body>
+</html>
