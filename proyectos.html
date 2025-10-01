@@ -5,140 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>EcoNova - Proyectos</title>
   <link href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Lato', sans-serif;
-      background: #ffffff;
-      color: #1d2d1d;
-    }
-    header {
-      background: #2d8659;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      color: #fff;
-    }
-    header h1 {
-      margin: 0;
-      font-family: 'Montserrat', sans-serif;
-    }
-    nav a {
-      color: white;
-      margin-left: 1.5rem;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    nav a:hover { text-decoration: underline; }
-
-    /* Hero Section */
-    .hero {
-      background: #e6f7f0;
-      text-align: center;
-      padding: 4rem 2rem;
-    }
-    .hero h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      color: #1b4332;
-    }
-    .hero p {
-      max-width: 600px;
-      margin: auto;
-      font-size: 1.1rem;
-    }
-
-    /* Contenido */
-    .contenido {
-      padding: 3rem 2rem;
-      max-width: 1000px;
-      margin: auto;
-    }
-    .contenido h3 {
-      color: #2d8659;
-      margin-bottom: 1rem;
-    }
-    .contenido p {
-      font-size: 1rem;
-      line-height: 1.6;
-      margin-bottom: 1.5rem;
-    }
-
-    /* Proyectos en tarjetas */
-    .proyectos {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas grandes */
-      gap: 2rem;
-      margin: 2rem 0;
-    }
-    @media (max-width: 800px) {
-      .proyectos {
-        grid-template-columns: 1fr; /* 1 columna en pantallas pequeñas */
-      }
-    }
-    .card {
-      background: #f5fdf8;
-      padding: 1.5rem;
-      border-radius: 10px;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-      transition: transform 0.2s;
-      text-align: center;
-    }
-    .card:hover {
-      transform: translateY(-5px);
-    }
-    .card img {
-      width: 60px;
-      margin-bottom: 1rem;
-    }
-    .card h4 {
-      margin-bottom: 0.5rem;
-      color: #2d8659;
-    }
-
-    /* Footer */
-    footer {
-      background: #2d8659;
-      color: white;
-      text-align: center;
-      padding: 1rem;
-      margin-top: 2rem;
-    }
-
-    /* Botón */
-    .btn {
-      display: inline-block;
-      margin-top: 1rem;
-      padding: 0.8rem 1.5rem;
-      background-color: #2d8659;
-      color: white;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .btn:hover {
-      background-color: #256947;
-    }
-  </style>
+  <!-- Enlazamos CSS común -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Header -->
+  <!-- Header (idéntico al índice) -->
   <header>
-  <h1>EcoNova</h1>
-  <nav>
-    <a href="index.html">Inicio</a>
-    <a href="equipo.html">Equipo</a>
-    <a href="servicios.html">Servicios</a>
-    <a href="proyectos.html">Proyectos</a>
-    <a href="recursos.html">Recursos</a>
-    <!-- Carrito de la compra -->
-    <a href="carrito.html" class="cart-link">
-      <img src="https://img.icons8.com/fluency/28/shopping-cart.png" alt="Carrito">
-    </a>
-  </nav>
-</header>
+    <h1>EcoNova</h1>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="equipo.html">Equipo</a>
+      <a href="servicios.html">Servicios</a>
+      <a href="proyectos.html">Proyectos</a>
+      <a href="recursos.html">Recursos</a>
+      <!-- Carrito de la compra -->
+      <a href="carrito.html" class="cart-link">
+        <img src="https://img.icons8.com/fluency/28/shopping-cart.png" alt="Carrito">
+      </a>
+    </nav>
+  </header>
 
   <!-- Hero -->
   <section class="hero">
@@ -192,6 +78,8 @@
 
 </body>
 </html>
+
+
 
 
 
