@@ -3,21 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EcoNova - Equipo</title>
+  <title>EcoNova - Energía limpia</title>
   <style>
+    /* Paleta y tipografía */
     body {
       margin: 0;
       font-family: 'Lato', sans-serif;
-      background: #ffffff;
       color: #1d2d1d;
+      background-color: #ffffff;
     }
     header {
-      background: #2d8659;
+      background-color: #2d8659;
       padding: 1rem 2rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
       color: #fff;
+    }
+    header h1 {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
     }
     nav a {
       color: white;
@@ -25,49 +30,77 @@
       text-decoration: none;
       font-weight: bold;
     }
-    nav a:hover { text-decoration: underline; }
-    
-    /* Sección Equipo */
-    .equipo {
-      padding: 3rem 2rem;
-      text-align: center;
+    nav a:hover {
+      text-decoration: underline;
     }
-    .equipo h2 {
+    nav .cart-link {
+  margin-left: 3rem; /* más espacio antes del carrito */
+}
+
+nav .cart-link img {
+  vertical-align: middle;
+}
+    /* Hero section */
+    .hero {
+      background: #e6f7f0;
+      text-align: center;
+      padding: 4rem 2rem;
+    }
+    .hero h2 {
       font-size: 2rem;
       margin-bottom: 1rem;
       color: #1b4332;
     }
-    .personas {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    .btn {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.8rem 1.5rem;
+      background-color: #2d8659;
+      color: white;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .btn:hover {
+      background-color: #256947;
+    }
+    /* Objetivo */
+    .objetivo {
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+    .objetivo h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: #1b4332;
+    }
+    .objetivo p {
+      max-width: 600px;
+      margin: auto;
+      font-size: 1.1rem;
+    }
+    /* Servicios */
+    .servicios {
+      display: flex;
+      justify-content: center;
       gap: 2rem;
-      margin-top: 2rem;
+      padding: 3rem 2rem;
+      background: #f5fdf8;
     }
     .card {
-      background: #f5fdf8;
+      background: white;
       padding: 1.5rem;
-      border-radius: 10px;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-      transition: transform 0.2s;
-    }
-    .card:hover {
-      transform: translateY(-5px);
+      border-radius: 8px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      flex: 1;
+      max-width: 200px;
     }
     .card img {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      object-fit: cover;
+      width: 60px;
       margin-bottom: 1rem;
     }
-    .card h3 {
-      margin: 0.5rem 0;
-      color: #2d8659;
-    }
-    .card p {
-      font-size: 0.95rem;
-      line-height: 1.4;
-    }
+    /* Footer */
     footer {
       background: #2d8659;
       color: white;
@@ -76,7 +109,7 @@
       margin-top: 2rem;
     }
   </style>
-</head>
+<head>
 <body>
 
   <!-- Header -->
@@ -143,5 +176,6 @@
 
 </body>
 </html>
+
 
 
