@@ -33,9 +33,7 @@
       margin-left: 1.5rem;
       font-weight: bold;
     }
-    nav a:hover {
-      text-decoration: underline;
-    }
+    nav a:hover { text-decoration: underline; }
 
     main {
       max-width: 1000px;
@@ -130,31 +128,31 @@
     }
 
     @media (max-width: 800px) {
-      .product-list {
-        flex-direction: column;
-        align-items: center;
-      }
-      table th, table td {
-        padding: 8px;
-      }
+      .product-list { flex-direction: column; align-items: center; }
+      table th, table td { padding: 8px; }
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>EcoNova</h1>
-    <nav>
-      <a href="index.html">Inicio</a>
-      <a href="servicios.html">Servicios</a>
-      <a href="carrito.html">Carrito (<span id="cart-count">0</span>)</a>
-    </nav>
-  </header>
+  <h1>EcoNova</h1>
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="equipo.html">Equipo</a>
+    <a href="servicios.html">Servicios</a>
+    <a href="proyectos.html">Proyectos</a>
+    <a href="renovables.html">Renovables</a>
+    <a href="recursos.html">Recursos</a>
+    <a href="contacto.html">Contacto</a>
+    <a href="carrito.html">Carrito (<span id="cart-count">0</span>)</a>
+  </nav>
+</header>
 
   <main>
-    <!-- Sección de productos -->
     <section class="products">
       <h2>Productos y Servicios</h2>
       <div class="product-list">
+        <!-- Productos físicos -->
         <div class="product">
           <h3>Placa Solar 500W</h3>
           <p>Alta eficiencia, instalación incluida</p>
@@ -173,25 +171,42 @@
           <span class="price">3000 €</span>
           <button class="add-to-cart" data-name="Kit Híbrido Solar + Eólico" data-price="3000">Añadir al carrito</button>
         </div>
+
+        <!-- Servicios de EcoNova -->
+        <div class="product">
+          <h3>Consultoría Energética</h3>
+          <p>Auditoría completa y recomendaciones personalizadas</p>
+          <span class="price">1200 €</span>
+          <button class="add-to-cart" data-name="Consultoría Energética" data-price="1200">Añadir al carrito</button>
+        </div>
+        <div class="product">
+          <h3>Instalación y Mantenimiento</h3>
+          <p>Servicio profesional para garantizar eficiencia y durabilidad</p>
+          <span class="price">800 €</span>
+          <button class="add-to-cart" data-name="Instalación y Mantenimiento" data-price="800">Añadir al carrito</button>
+        </div>
+        <div class="product">
+          <h3>Optimización Energética Integral</h3>
+          <p>Implementación de soluciones sostenibles en tu empresa</p>
+          <span class="price">2500 €</span>
+          <button class="add-to-cart" data-name="Optimización Energética Integral" data-price="2500">Añadir al carrito</button>
+        </div>
       </div>
     </section>
 
-    <!-- Sección del carrito -->
     <section class="cart">
       <h2>Carrito de Compra</h2>
       <table>
         <thead>
           <tr>
-            <th>Producto</th>
+            <th>Producto/Servicio</th>
             <th>Cantidad</th>
             <th>Precio</th>
             <th>Total</th>
             <th></th>
           </tr>
         </thead>
-        <tbody id="cart-items">
-          <!-- Aquí se insertan los items del carrito -->
-        </tbody>
+        <tbody id="cart-items"></tbody>
       </table>
       <div class="cart-total">
         <h3>Total: <span id="cart-total">0 €</span></h3>
@@ -217,9 +232,7 @@
         const tr = document.createElement('tr');
         tr.innerHTML = `
           <td>${item.name}</td>
-          <td>
-            <input type="number" value="${item.quantity}" min="1" data-index="${index}" class="quantity-input">
-          </td>
+          <td><input type="number" value="${item.quantity}" min="1" data-index="${index}" class="quantity-input"></td>
           <td>${item.price} €</td>
           <td>${itemTotal} €</td>
           <td><button class="remove-item" data-index="${index}">X</button></td>
@@ -237,11 +250,8 @@
         const name = btn.dataset.name;
         const price = parseFloat(btn.dataset.price);
         const existing = cart.find(item => item.name === name);
-        if (existing) {
-          existing.quantity++;
-        } else {
-          cart.push({ name, price, quantity: 1 });
-        }
+        if (existing) existing.quantity++;
+        else cart.push({ name, price, quantity: 1 });
         updateCart();
       });
     });
@@ -277,6 +287,8 @@
   </script>
 </body>
 </html>
+
+
 
 
 
