@@ -3,15 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EcoNova - Energía limpia</title>
+  <title>EcoNova - Equipo</title>
   <style>
-    /* Paleta y tipografía */
     body {
       margin: 0;
       font-family: 'Lato', sans-serif;
+      background: #ffffff;
       color: #1d2d1d;
-      background-color: #ffffff;
     }
+
+    /* Header */
     header {
       background-color: #2d8659;
       padding: 1rem 2rem;
@@ -20,86 +21,85 @@
       align-items: center;
       color: #fff;
     }
+
     header h1 {
       margin: 0;
       font-family: 'Montserrat', sans-serif;
     }
+
     nav a {
       color: white;
       margin-left: 1.5rem;
       text-decoration: none;
       font-weight: bold;
     }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    nav .cart-link {
-  margin-left: 3rem; /* más espacio antes del carrito */
-}
 
-nav .cart-link img {
-  vertical-align: middle;
-}
-    /* Hero section */
-    .hero {
-      background: #e6f7f0;
-      text-align: center;
-      padding: 4rem 2rem;
+    nav a:hover { text-decoration: underline; }
+
+    nav .cart-link {
+      margin-left: 3rem; /* más espacio antes del carrito */
     }
-    .hero h2 {
+
+    nav .cart-link img {
+      vertical-align: middle;
+    }
+
+    /* Sección Equipo */
+    .equipo {
+      padding: 3rem 2rem;
+      text-align: center;
+      background: #f5fdf8;
+    }
+
+    .equipo h2 {
       font-size: 2rem;
       margin-bottom: 1rem;
       color: #1b4332;
     }
-    .btn {
-      display: inline-block;
-      margin-top: 1rem;
-      padding: 0.8rem 1.5rem;
-      background-color: #2d8659;
-      color: white;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .btn:hover {
-      background-color: #256947;
-    }
-    /* Objetivo */
-    .objetivo {
-      padding: 3rem 2rem;
-      text-align: center;
-    }
-    .objetivo h3 {
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-      color: #1b4332;
-    }
-    .objetivo p {
+
+    .equipo p {
       max-width: 600px;
       margin: auto;
       font-size: 1.1rem;
+      margin-bottom: 2rem;
     }
-    /* Servicios */
-    .servicios {
-      display: flex;
-      justify-content: center;
+
+    .personas {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 2rem;
-      padding: 3rem 2rem;
-      background: #f5fdf8;
     }
+
     .card {
-      background: white;
+      background: #ffffff;
       padding: 1.5rem;
-      border-radius: 8px;
-      text-align: center;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      flex: 1;
-      max-width: 200px;
+      border-radius: 10px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
     }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
     .card img {
-      width: 60px;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
       margin-bottom: 1rem;
     }
+
+    .card h3 {
+      margin: 0.5rem 0;
+      color: #2d8659;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      line-height: 1.4;
+    }
+
     /* Footer */
     footer {
       background: #2d8659;
@@ -108,26 +108,32 @@ nav .cart-link img {
       padding: 1rem;
       margin-top: 2rem;
     }
+
+    @media (max-width: 600px) {
+      .personas {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
-<head>
+</head>
 <body>
 
   <!-- Header -->
   <header>
-  <h1>EcoNova</h1>
-  <nav>
-    <a href="index.html">Inicio</a>
-    <a href="equipo.html">Equipo</a>
-    <a href="servicios.html">Servicios</a>
-    <a href="proyectos.html">Proyectos</a>
-    <a href="recursos.html">Recursos</a>
-    <!-- Carrito de la compra -->
-    <a href="carrito.html" class="cart-link">
-      <img src="https://img.icons8.com/fluency/28/shopping-cart.png" alt="Carrito">
-    </a>
-  </nav>
-</header>
-
+    <h1>EcoNova</h1>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="equipo.html">Equipo</a>
+      <a href="servicios.html">Servicios</a>
+      <a href="proyectos.html">Proyectos</a>
+      <a href="renovables.html">Renovables</a>
+      <a href="recursos.html">Recursos</a>
+      <a href="contacto.html">Contacto</a>
+      <a href="carrito.html" class="cart-link">
+        <img src="https://img.icons8.com/fluency/28/shopping-cart.png" alt="Carrito">
+      </a>
+    </nav>
+  </header>
 
   <!-- Sección Equipo -->
   <section class="equipo">
@@ -135,7 +141,6 @@ nav .cart-link img {
     <p>Conoce a los 4 fundadores de EcoNova, estudiantes de Abat Oliba que creen en un futuro sostenible.</p>
 
     <div class="personas">
-      <!-- Miembro 1 -->
       <div class="card">
         <img src="https://via.placeholder.com/120" alt="Foto miembro 1">
         <h3>Nombre 1</h3>
@@ -143,7 +148,6 @@ nav .cart-link img {
         <p>Encargado de dar visibilidad a EcoNova y conectar con los clientes.</p>
       </div>
 
-      <!-- Miembro 2 -->
       <div class="card">
         <img src="https://via.placeholder.com/120" alt="Foto miembro 2">
         <h3>Nombre 2</h3>
@@ -151,7 +155,6 @@ nav .cart-link img {
         <p>Diseña soluciones energéticas innovadoras y eficientes.</p>
       </div>
 
-      <!-- Miembro 3 -->
       <div class="card">
         <img src="https://via.placeholder.com/120" alt="Foto miembro 3">
         <h3>Nombre 3</h3>
@@ -159,7 +162,6 @@ nav .cart-link img {
         <p>Gestiona recursos e inversiones para garantizar la viabilidad de los proyectos.</p>
       </div>
 
-      <!-- Miembro 4 -->
       <div class="card">
         <img src="https://via.placeholder.com/120" alt="Foto miembro 4">
         <h3>Nombre 4</h3>
