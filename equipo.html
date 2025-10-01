@@ -66,8 +66,9 @@
 
     .personas {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      grid-template-columns: repeat(3, 1fr); /* 3 columnas */
       gap: 2rem;
+      justify-items: center;
     }
 
     .card {
@@ -76,6 +77,7 @@
       border-radius: 10px;
       box-shadow: 0 3px 10px rgba(0,0,0,0.1);
       transition: transform 0.2s;
+      width: 220px;
     }
 
     .card:hover {
@@ -109,15 +111,20 @@
       margin-top: 2rem;
     }
 
+    @media (max-width: 900px) {
+      .personas {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en tablet */
+      }
+    }
+
     @media (max-width: 600px) {
       .personas {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* 1 columna en móvil */
       }
     }
   </style>
 </head>
 <body>
-
   <!-- Header -->
   <header>
   <h1>EcoNova</h1>
@@ -133,12 +140,13 @@
     </a>
   </nav>
 </header>
-  <!-- Sección Equipo -->
+   <!-- Sección Equipo -->
   <section class="equipo">
     <h2>Nuestro Equipo</h2>
     <p>Conoce a los 5 fundadores de EcoNova, estudiantes de Abat Oliba que creen en un futuro sostenible.</p>
 
     <div class="personas">
+      <!-- Fila 1 -->
       <div class="card">
         <img src="https://via.placeholder.com/120" alt="Foto Marc Burgada">
         <h3>Marc Burgada</h3>
@@ -160,6 +168,7 @@
         <p>Gestiona recursos e inversiones para garantizar la viabilidad de los proyectos.</p>
       </div>
 
+      <!-- Fila 2 -->
       <div class="card">
         <img src="https://via.placeholder.com/120" alt="Foto Jaume Petit">
         <h3>Jaume Petit</h3>
