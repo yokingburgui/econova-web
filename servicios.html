@@ -6,14 +6,15 @@
   <title>EcoNova - Servicios</title>
   <link href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@700&display=swap" rel="stylesheet">
   <style>
+    /* Paleta y tipografía */
     body {
       margin: 0;
       font-family: 'Lato', sans-serif;
-      background: #ffffff;
       color: #1d2d1d;
+      background-color: #ffffff;
     }
     header {
-      background: #2d8659;
+      background-color: #2d8659;
       padding: 1rem 2rem;
       display: flex;
       justify-content: space-between;
@@ -30,8 +31,16 @@
       text-decoration: none;
       font-weight: bold;
     }
-    nav a:hover { text-decoration: underline; }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    nav .cart-link {
+  margin-left: 3rem; /* más espacio antes del carrito */
+}
 
+nav .cart-link img {
+  vertical-align: middle;
+}
     /* Hero Section */
     .hero {
       background: #e6f7f0;
@@ -198,6 +207,7 @@
 
 </body>
 </html>
+
 
 
 
