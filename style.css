@@ -1,0 +1,202 @@
+/* =====================================
+   RESET BÁSICO
+===================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =====================================
+   BODY
+===================================== */
+body {
+  font-family: 'Lato', sans-serif;
+  color: #1d2d1d;
+  background-color: #ffffff;
+  line-height: 1.6;
+}
+
+/* =====================================
+   HEADER Y NAVEGACIÓN
+===================================== */
+header {
+  background-color: #2d8659;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  flex-wrap: wrap;
+}
+
+header h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: white;
+  margin-left: 1.5rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+nav .cart-link {
+  margin-left: 3rem;
+}
+
+nav .cart-link img {
+  vertical-align: middle;
+}
+
+/* =====================================
+   HERO
+===================================== */
+.hero {
+  background: #e6f7f0;
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.hero h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #1b4332;
+}
+
+.hero p {
+  max-width: 600px;
+  margin: auto;
+  font-size: 1.1rem;
+}
+
+/* =====================================
+   SECCIONES (contenido, objetivos, servicios)
+===================================== */
+.contenido,
+.objetivo,
+.equipo,
+.servicios,
+.proyectos {
+  padding: 3rem 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.contenido h3,
+.objetivo h3,
+.servicios h3,
+.proyectos h3,
+.equipo h2 {
+  color: #2d8659;
+  margin-bottom: 1rem;
+}
+
+.contenido p,
+.objetivo p,
+.servicios p,
+.proyectos p,
+.equipo p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Tarjetas */
+.card {
+  background: #f5fdf8;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+  text-align: center;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 60px;
+  margin-bottom: 1rem;
+}
+
+.card h4,
+.card h3 {
+  margin-bottom: 0.5rem;
+  color: #2d8659;
+}
+
+/* =====================================
+   GRIDS Y RESPONSIVE
+===================================== */
+.personas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  justify-items: center;
+}
+
+.servicios,
+.proyectos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+@media (max-width: 900px) {
+  .personas,
+  .servicios,
+  .proyectos {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .personas,
+  .servicios,
+  .proyectos {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =====================================
+   BOTONES
+===================================== */
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.8rem 1.5rem;
+  background-color: #2d8659;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background-color: #256947;
+}
+
+/* =====================================
+   FOOTER
+===================================== */
+footer {
+  background: #2d8659;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
