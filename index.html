@@ -4,6 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>EcoNova - Energía limpia</title>
+
+  <!-- SEO -->
+  <meta name="description" content="EcoNova ofrece soluciones de energía solar, eólica y renovable para empresas sostenibles.">
+  <meta name="keywords" content="energía solar, energía eólica, sostenibilidad, renovables, EcoNova">
+  <meta name="author" content="EcoNova">
+
   <style>
     /* Paleta y tipografía */
     body {
@@ -12,6 +18,8 @@
       color: #1d2d1d;
       background-color: #ffffff;
     }
+
+    /* Header */
     header {
       background-color: #2d8659;
       padding: 1rem 2rem;
@@ -19,10 +27,17 @@
       justify-content: space-between;
       align-items: center;
       color: #fff;
+      flex-wrap: wrap;
     }
     header h1 {
       margin: 0;
       font-family: 'Montserrat', sans-serif;
+      font-size: 1.5rem;
+    }
+    nav {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
     }
     nav a {
       color: white;
@@ -34,13 +49,13 @@
       text-decoration: underline;
     }
     nav .cart-link {
-  margin-left: 3rem; /* más espacio antes del carrito */
-}
+      margin-left: 3rem;
+    }
+    nav .cart-link img {
+      vertical-align: middle;
+    }
 
-nav .cart-link img {
-  vertical-align: middle;
-}
-    /* Hero section */
+    /* Hero */
     .hero {
       background: #e6f7f0;
       text-align: center;
@@ -64,6 +79,7 @@ nav .cart-link img {
     .btn:hover {
       background-color: #256947;
     }
+
     /* Objetivo */
     .objetivo {
       padding: 3rem 2rem;
@@ -79,6 +95,7 @@ nav .cart-link img {
       margin: auto;
       font-size: 1.1rem;
     }
+
     /* Servicios */
     .servicios {
       display: flex;
@@ -86,6 +103,7 @@ nav .cart-link img {
       gap: 2rem;
       padding: 3rem 2rem;
       background: #f5fdf8;
+      flex-wrap: wrap;
     }
     .card {
       background: white;
@@ -93,13 +111,14 @@ nav .cart-link img {
       border-radius: 8px;
       text-align: center;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      flex: 1;
-      max-width: 200px;
+      flex: 1 1 200px;
+      max-width: 220px;
     }
     .card img {
       width: 60px;
       margin-bottom: 1rem;
     }
+
     /* Footer */
     footer {
       background: #2d8659;
@@ -108,32 +127,47 @@ nav .cart-link img {
       padding: 1rem;
       margin-top: 2rem;
     }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav {
+        margin-top: 0.5rem;
+      }
+      nav a {
+        margin: 0.5rem 1rem 0 0;
+      }
+      .hero h2 {
+        font-size: 1.5rem;
+      }
+    }
   </style>
 </head>
 <body>
 
   <!-- Header -->
   <header>
-  <h1>EcoNova</h1>
-  <nav>
-    <a href="index.html">Inicio</a>
-    <a href="equipo.html">Equipo</a>
-    <a href="servicios.html">Servicios</a>
-    <a href="proyectos.html">Proyectos</a>
-    <a href="recursos.html">Recursos</a>
-    <!-- Carrito de la compra -->
-    <a href="carrito.html" class="cart-link">
-      <img src="https://img.icons8.com/fluency/28/shopping-cart.png" alt="Carrito">
-    </a>
-  </nav>
-</header>
+    <h1>EcoNova - Energía limpia</h1>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="equipo.html">Equipo</a>
+      <a href="servicios.html">Servicios</a>
+      <a href="proyectos.html">Proyectos</a>
+      <a href="recursos.html">Recursos</a>
+      <a href="carrito.html" class="cart-link">
+        <img src="https://img.icons8.com/fluency/28/shopping-cart.png" alt="Carrito">
+      </a>
+    </nav>
+  </header>
 
   <!-- Hero -->
   <section class="hero">
     <h2>Energía limpia para empresas sostenibles</h2>
     <p>Soluciones innovadoras en energías renovables para reducir tu huella de carbono.</p>
-    <a href="Conocenos.html" class="btn">Conócenos</a>
-
+    <a href="conocenos.html" class="btn">Conócenos</a>
   </section>
 
   <!-- Objetivo -->
@@ -165,3 +199,4 @@ nav .cart-link img {
 
 </body>
 </html>
+
