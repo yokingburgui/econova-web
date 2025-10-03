@@ -3,7 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EcoNova - Equipo</title>
+  <title>EcoNova - Nuestro Equipo</title>
+  <meta name="description" content="Conoce al equipo de EcoNova, un grupo de jóvenes emprendedores que apuestan por un futuro sostenible con energías renovables.">
+  <meta name="keywords" content="EcoNova, equipo, energías renovables, sostenibilidad, empresa verde">
+
   <style>
     body {
       margin: 0;
@@ -34,7 +37,9 @@
       font-weight: bold;
     }
 
-    nav a:hover { text-decoration: underline; }
+    nav a:hover {
+      text-decoration: underline;
+    }
 
     nav .cart-link {
       margin-left: 3rem;
@@ -58,7 +63,7 @@
     }
 
     .equipo p {
-      max-width: 600px;
+      max-width: 700px;
       margin: auto;
       font-size: 1.1rem;
       margin-bottom: 2rem;
@@ -66,7 +71,7 @@
 
     .personas {
       display: grid;
-      grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+      grid-template-columns: repeat(3, 1fr);
       gap: 2rem;
       justify-items: center;
     }
@@ -102,6 +107,14 @@
       line-height: 1.4;
     }
 
+    /* Segunda fila de miembros */
+    .fila-dos {
+      display: flex;
+      justify-content: center;
+      gap: 9rem; /* más espacio entre los dos miembros */
+      margin-top: 2.5rem;
+    }
+
     /* Footer */
     footer {
       background: #2d8659;
@@ -111,83 +124,89 @@
       margin-top: 2rem;
     }
 
+    /* Responsive */
     @media (max-width: 900px) {
       .personas {
-        grid-template-columns: repeat(2, 1fr); /* 2 columnas en tablet */
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .fila-dos {
+        gap: 4rem;
       }
     }
 
     @media (max-width: 600px) {
       .personas {
-        grid-template-columns: 1fr; /* 1 columna en móvil */
+        grid-template-columns: 1fr;
+      }
+      .fila-dos {
+        flex-direction: column;
+        gap: 2rem;
       }
     }
   </style>
 </head>
 <body>
+
   <!-- Header -->
   <header>
-  <h1>EcoNova</h1>
-  <nav>
-    <a href="index.html">Inicio</a>
-    <a href="equipo.html">Equipo</a>
-    <a href="servicios.html">Servicios</a>
-    <a href="proyectos.html">Proyectos</a>
-    <a href="recursos.html">Recursos</a>
-    <!-- Carrito de la compra -->
-    <a href="carrito.html" class="cart-link">
-      <img src="https://img.icons8.com/fluency/28/shopping-cart.png" alt="Carrito">
-    </a>
-  </nav>
-</header>
-   <!-- Sección Equipo -->
+    <h1>EcoNova</h1>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="equipo.html">Equipo</a>
+      <a href="servicios.html">Servicios</a>
+      <a href="proyectos.html">Proyectos</a>
+      <a href="recursos.html">Recursos</a>
+      <a href="carrito.html" class="cart-link">
+        <img src="https://img.icons8.com/fluency/28/shopping-cart.png" alt="Carrito">
+      </a>
+    </nav>
+  </header>
+
+  <!-- Sección Equipo -->
   <section class="equipo">
     <h2>Nuestro Equipo</h2>
     <p>Conoce a los 5 fundadores de EcoNova, estudiantes de Abat Oliba que creen en un futuro sostenible.</p>
 
+    <!-- Fila 1: 3 miembros -->
     <div class="personas">
-  <!-- Fila 1: 3 miembros -->
-  <div class="card">
-    <img src="https://via.placeholder.com/120" alt="Foto Marc Burgada">
-    <h3>Marc Burgada</h3>
-    <p><strong>Rol:</strong> Marketing & Comunicación</p>
-    <p>Encargado de dar visibilidad a EcoNova y conectar con los clientes.</p>
-  </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/120" alt="Foto Marc Burgada">
+        <h3>Marc Burgada</h3>
+        <p><strong>Rol:</strong> Marketing & Comunicación</p>
+        <p>Encargado de dar visibilidad a EcoNova y conectar con los clientes.</p>
+      </div>
 
-  <div class="card">
-    <img src="https://via.placeholder.com/120" alt="Foto Arnau Sasot">
-    <h3>Arnau Sasot</h3>
-    <p><strong>Rol:</strong> Ingeniería</p>
-    <p>Diseña soluciones energéticas innovadoras y eficientes.</p>
-  </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/120" alt="Foto Arnau Sasot">
+        <h3>Arnau Sasot</h3>
+        <p><strong>Rol:</strong> Ingeniería</p>
+        <p>Diseña soluciones energéticas innovadoras y eficientes.</p>
+      </div>
 
-  <div class="card">
-    <img src="https://via.placeholder.com/120" alt="Foto Gagic Avetisyan">
-    <h3>Gagic Avetisyan</h3>
-    <p><strong>Rol:</strong> Finanzas</p>
-    <p>Gestiona recursos e inversiones para garantizar la viabilidad de los proyectos.</p>
-  </div>
-</div>
+      <div class="card">
+        <img src="https://via.placeholder.com/120" alt="Foto Gagic Avetisyan">
+        <h3>Gagic Avetisyan</h3>
+        <p><strong>Rol:</strong> Finanzas</p>
+        <p>Gestiona recursos e inversiones para garantizar la viabilidad de los proyectos.</p>
+      </div>
+    </div>
 
-<!-- Fila 2: 2 miembros centrados con más espacio -->
-<div style="display: flex; justify-content: center; gap: 8.5rem; margin-top: 2rem;">
-  <div class="card">
-    <img src="https://via.placeholder.com/120" alt="Foto Jaume Petit">
-    <h3>Jaume Petit</h3>
-    <p><strong>Rol:</strong> Estrategia & Innovación</p>
-    <p>Define el rumbo de EcoNova y explora nuevas oportunidades verdes.</p>
-  </div>
+    <!-- Fila 2: 2 miembros centrados -->
+    <div class="fila-dos">
+      <div class="card">
+        <img src="https://via.placeholder.com/120" alt="Foto Jaume Petit">
+        <h3>Jaume Petit</h3>
+        <p><strong>Rol:</strong> Estrategia & Innovación</p>
+        <p>Define el rumbo de EcoNova y explora nuevas oportunidades verdes.</p>
+      </div>
 
-  <div class="card">
-    <img src="https://via.placeholder.com/120" alt="Foto Mathias Ulloa">
-    <h3>Mathias Ulloa</h3>
-    <p><strong>Rol:</strong> Operaciones & Logística</p>
-    <p>Se encarga de la implementación y seguimiento de los proyectos en terreno.</p>
-  </div>
-</div>
-
-
-
+      <div class="card">
+        <img src="https://via.placeholder.com/120" alt="Foto Mathias Ulloa">
+        <h3>Mathias Ulloa</h3>
+        <p><strong>Rol:</strong> Operaciones & Logística</p>
+        <p>Se encarga de la implementación y seguimiento de los proyectos en terreno.</p>
+      </div>
+    </div>
   </section>
 
   <!-- Footer -->
@@ -197,6 +216,8 @@
 
 </body>
 </html>
+
+
 
 
 
