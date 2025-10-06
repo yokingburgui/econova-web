@@ -81,10 +81,17 @@
       margin-bottom: 0.7rem;
     }
 
-    /* Botón */
+    /* Botón y redes */
+    .contacto-redes {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
     .btn {
       display: inline-block;
-      margin-top: 1rem;
       padding: 0.8rem 1.5rem;
       background-color: #2d8659;
       color: white;
@@ -94,6 +101,20 @@
     }
     .btn:hover {
       background-color: #256947;
+    }
+
+    .redes {
+      display: flex;
+      gap: 0.8rem;
+      align-items: center;
+    }
+    .redes a img {
+      width: 28px;
+      height: 28px;
+      transition: transform 0.2s;
+    }
+    .redes a img:hover {
+      transform: scale(1.1);
     }
 
     /* Footer */
@@ -184,6 +205,21 @@
     .chatbot-input button:hover {
       background-color: #256947;
     }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+      nav a {
+        margin: 0.5rem;
+      }
+      .contacto-redes {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
   </style>
 </head>
 <body>
@@ -230,7 +266,24 @@
       <li>Acceso a incentivos y subvenciones para energías limpias.</li>
     </ul>
 
-    <a href="contacto.html" class="btn">Contacta con nosotros</a>
+    <!-- Botón + redes -->
+    <div class="contacto-redes">
+      <a href="contacto.html" class="btn">Contacta con nosotros</a>
+      <div class="redes">
+        <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram">
+          <img src="https://img.icons8.com/fluency/28/instagram-new.png" alt="Instagram">
+        </a>
+        <a href="https://twitter.com/" target="_blank" aria-label="Twitter">
+          <img src="https://img.icons8.com/fluency/28/twitter.png" alt="Twitter">
+        </a>
+        <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook">
+          <img src="https://img.icons8.com/fluency/28/facebook-new.png" alt="Facebook">
+        </a>
+        <a href="https://wa.me/34123456789" target="_blank" aria-label="WhatsApp">
+          <img src="https://img.icons8.com/fluency/28/whatsapp.png" alt="WhatsApp">
+        </a>
+      </div>
+    </div>
   </section>
 
   <!-- Footer -->
@@ -292,6 +345,8 @@
 
 </body>
 </html>
+
+
 
 
 
