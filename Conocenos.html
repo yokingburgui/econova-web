@@ -20,10 +20,16 @@
       justify-content: space-between;
       align-items: center;
       color: #fff;
+      flex-wrap: wrap;
     }
     header h1 {
       margin: 0;
       font-family: 'Montserrat', sans-serif;
+    }
+    nav {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
     }
     nav a {
       color: white;
@@ -98,25 +104,104 @@
       padding: 1rem;
       margin-top: 2rem;
     }
+
+    /* --- Chatbot --- */
+    .chatbot-container {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 300px;
+      font-family: 'Lato', sans-serif;
+      z-index: 1000;
+    }
+
+    .chatbot-header {
+      background-color: #2d8659;
+      color: white;
+      padding: 10px;
+      border-radius: 10px 10px 0 0;
+      cursor: pointer;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .chatbot-body {
+      background: white;
+      border: 2px solid #2d8659;
+      border-radius: 0 0 10px 10px;
+      display: none;
+      flex-direction: column;
+      height: 350px;
+    }
+
+    .chatbot-messages {
+      flex: 1;
+      overflow-y: auto;
+      padding: 10px;
+      font-size: 0.9rem;
+    }
+
+    .bot-message {
+      background: #e6f7f0;
+      padding: 8px;
+      border-radius: 10px;
+      margin: 5px 0;
+      max-width: 80%;
+    }
+
+    .user-message {
+      background: #2d8659;
+      color: white;
+      padding: 8px;
+      border-radius: 10px;
+      margin: 5px 0;
+      align-self: flex-end;
+      max-width: 80%;
+    }
+
+    .chatbot-input {
+      display: flex;
+      border-top: 1px solid #ccc;
+    }
+
+    .chatbot-input input {
+      flex: 1;
+      border: none;
+      padding: 10px;
+      border-radius: 0 0 0 10px;
+      outline: none;
+    }
+
+    .chatbot-input button {
+      background-color: #2d8659;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 0 0 10px 0;
+      cursor: pointer;
+    }
+
+    .chatbot-input button:hover {
+      background-color: #256947;
+    }
   </style>
 </head>
 <body>
 
   <!-- Header -->
   <header>
-  <h1>EcoNova</h1>
-  <nav>
-    <a href="index.html">Inicio</a>
-    <a href="equipo.html">Equipo</a>
-    <a href="servicios.html">Servicios</a>
-    <a href="proyectos.html">Proyectos</a>
-    <a href="recursos.html">Recursos</a>
-    <!-- Carrito de la compra -->
-    <a href="carrito.html" class="cart-link">
-      <img src="https://img.icons8.com/fluency/28/shopping-cart.png" alt="Carrito">
-    </a>
-  </nav>
-</header>
+    <h1>EcoNova</h1>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="equipo.html">Equipo</a>
+      <a href="servicios.html">Servicios</a>
+      <a href="proyectos.html">Proyectos</a>
+      <a href="recursos.html">Recursos</a>
+      <a href="carrito.html" class="cart-link">
+        <img src="https://img.icons8.com/fluency/28/shopping-cart.png" alt="Carrito">
+      </a>
+    </nav>
+  </header>
 
   <!-- Hero -->
   <section class="hero">
@@ -153,8 +238,62 @@
     <p>© 2025 EcoNova · Energía limpia para un futuro sostenible</p>
   </footer>
 
+  <!-- Chatbot EcoNova -->
+  <div class="chatbot-container">
+    <div class="chatbot-header" onclick="toggleChat()">
+      💬 Asistente EcoNova
+    </div>
+    <div class="chatbot-body" id="chatBody">
+      <div class="chatbot-messages" id="chatMessages">
+        <div class="bot-message">👋 ¡Hola! Soy el asistente de EcoNova. ¿En qué puedo ayudarte?</div>
+      </div>
+      <div class="chatbot-input">
+        <input type="text" id="userInput" placeholder="Escribe tu mensaje...">
+        <button onclick="sendMessage()">Enviar</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleChat() {
+      const chatBody = document.getElementById("chatBody");
+      chatBody.style.display = chatBody.style.display === "none" || chatBody.style.display === "" ? "flex" : "none";
+    }
+
+    function sendMessage() {
+      const input = document.getElementById("userInput");
+      const messages = document.getElementById("chatMessages");
+      const userText = input.value.trim();
+      if (userText === "") return;
+
+      const userMessage = document.createElement("div");
+      userMessage.classList.add("user-message");
+      userMessage.textContent = userText;
+      messages.appendChild(userMessage);
+
+      const botMessage = document.createElement("div");
+      botMessage.classList.add("bot-message");
+
+      if (userText.toLowerCase().includes("hola")) {
+        botMessage.textContent = "¡Hola! 😊 ¿Quieres saber más sobre nuestros servicios o proyectos?";
+      } else if (userText.toLowerCase().includes("servicios")) {
+        botMessage.textContent = "Ofrecemos soluciones solares, eólicas y sostenibles 🌞💨🌿";
+      } else if (userText.toLowerCase().includes("contacto")) {
+        botMessage.textContent = "Puedes contactarnos a través del formulario en la página 'Contacto' 📩";
+      } else {
+        botMessage.textContent = "No estoy seguro de haber entendido 🤔. Prueba escribiendo 'servicios' o 'contacto'.";
+      }
+
+      messages.appendChild(botMessage);
+      messages.scrollTop = messages.scrollHeight;
+      input.value = "";
+    }
+  </script>
+
 </body>
 </html>
+
+
 
 
 
