@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>EcoNova - Servicios</title>
   <link href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+
   <style>
     /* Paleta y tipografía */
     body {
@@ -13,6 +14,7 @@
       color: #1d2d1d;
       background-color: #ffffff;
     }
+
     /* Header */
     header {
       background-color: #2d8659;
@@ -48,6 +50,7 @@
     nav .cart-link img {
       vertical-align: middle;
     }
+
     /* Hero Section */
     .hero {
       background: #e6f7f0;
@@ -83,17 +86,17 @@
 
     /* Servicios en tarjetas */
     .servicios {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 columnas fijas en pantallas grandes */
-  gap: 2rem;
-  margin: 2rem 0;
-}
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      margin: 2rem 0;
+    }
 
-@media (max-width: 800px) {
-  .servicios {
-    grid-template-columns: 1fr; /* 1 columna en pantallas pequeñas */
-  }
-}
+    @media (max-width: 800px) {
+      .servicios {
+        grid-template-columns: 1fr;
+      }
+    }
 
     .card {
       background: #f5fdf8;
@@ -138,26 +141,41 @@
     .btn:hover {
       background-color: #256947;
     }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav {
+        margin-top: 0.5rem;
+      }
+      nav a {
+        margin: 0.5rem 1rem 0 0;
+      }
+      .hero h2 {
+        font-size: 1.5rem;
+      }
+    }
   </style>
 </head>
 <body>
 
   <!-- Header -->
   <header>
-  <h1>EcoNova</h1>
-  <nav>
-    <a href="index.html">Inicio</a>
-    <a href="equipo.html">Equipo</a>
-    <a href="servicios.html">Servicios</a>
-    <a href="proyectos.html">Proyectos</a>
-    <a href="recursos.html">Recursos</a>
-    <!-- Carrito de la compra -->
-    <a href="carrito.html" class="cart-link">
-      <img src="https://img.icons8.com/fluency/28/shopping-cart.png" alt="Carrito">
-    </a>
-  </nav>
-</header>
-
+    <h1>EcoNova - Energía limpia</h1>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="equipo.html">Equipo</a>
+      <a href="servicios.html">Servicios</a>
+      <a href="proyectos.html">Proyectos</a>
+      <a href="recursos.html">Recursos</a>
+      <a href="carrito.html" class="cart-link">
+        <img src="https://img.icons8.com/fluency/28/shopping-cart.png" alt="Carrito">
+      </a>
+    </nav>
+  </header>
 
   <!-- Hero -->
   <section class="hero">
@@ -214,6 +232,8 @@
 
 </body>
 </html>
+
+
 
 
 
