@@ -13,6 +13,7 @@
       background: #ffffff;
       color: #1d2d1d;
     }
+
     header {
       background: #2d8659;
       padding: 1rem 2rem;
@@ -22,66 +23,71 @@
       color: #fff;
       flex-wrap: wrap;
     }
+
     header h1 {
       margin: 0;
       font-family: 'Montserrat', sans-serif;
     }
+
     nav {
       display: flex;
       align-items: center;
       flex-wrap: wrap;
     }
+
     nav a {
       color: white;
       margin-left: 1.5rem;
       text-decoration: none;
       font-weight: bold;
     }
+
     nav a:hover { text-decoration: underline; }
 
-    /* Hero Section */
     .hero {
       background: #e6f7f0;
       text-align: center;
       padding: 4rem 2rem;
     }
+
     .hero h2 {
       font-size: 2rem;
       margin-bottom: 1rem;
       color: #1b4332;
     }
+
     .hero p {
       max-width: 600px;
       margin: auto;
       font-size: 1.1rem;
     }
 
-    /* Sección Contenido */
     .contenido {
       padding: 3rem 2rem;
       max-width: 900px;
       margin: auto;
     }
+
     .contenido h3 {
       color: #2d8659;
       margin-bottom: 1rem;
     }
+
     .contenido p {
       font-size: 1rem;
       line-height: 1.6;
       margin-bottom: 1.5rem;
     }
 
-    /* Listas */
     ul {
       margin-left: 1.5rem;
       margin-bottom: 1.5rem;
     }
+
     li {
       margin-bottom: 0.7rem;
     }
 
-    /* Botón y redes */
     .contacto-redes {
       display: flex;
       align-items: center;
@@ -99,6 +105,7 @@
       text-decoration: none;
       font-weight: bold;
     }
+
     .btn:hover {
       background-color: #256947;
     }
@@ -108,16 +115,17 @@
       gap: 0.8rem;
       align-items: center;
     }
+
     .redes a img {
       width: 28px;
       height: 28px;
       transition: transform 0.2s;
     }
+
     .redes a img:hover {
       transform: scale(1.1);
     }
 
-    /* Footer */
     footer {
       background: #2d8659;
       color: white;
@@ -206,7 +214,6 @@
       background-color: #256947;
     }
 
-    /* Responsive */
     @media (max-width: 600px) {
       header {
         flex-direction: column;
@@ -266,22 +273,13 @@
       <li>Acceso a incentivos y subvenciones para energías limpias.</li>
     </ul>
 
-    <!-- Botón + redes -->
     <div class="contacto-redes">
       <a href="contacto.html" class="btn">Contacta con nosotros</a>
       <div class="redes">
-        <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram">
-          <img src="https://img.icons8.com/fluency/28/instagram-new.png" alt="Instagram">
-        </a>
-        <a href="https://twitter.com/" target="_blank" aria-label="Twitter">
-          <img src="https://img.icons8.com/fluency/28/twitter.png" alt="Twitter">
-        </a>
-        <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook">
-          <img src="https://img.icons8.com/fluency/28/facebook-new.png" alt="Facebook">
-        </a>
-        <a href="https://wa.me/34123456789" target="_blank" aria-label="WhatsApp">
-          <img src="https://img.icons8.com/fluency/28/whatsapp.png" alt="WhatsApp">
-        </a>
+        <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram"><img src="https://img.icons8.com/fluency/28/instagram-new.png" alt="Instagram"></a>
+        <a href="https://twitter.com/" target="_blank" aria-label="Twitter"><img src="https://img.icons8.com/fluency/28/twitter.png" alt="Twitter"></a>
+        <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook"><img src="https://img.icons8.com/fluency/28/facebook-new.png" alt="Facebook"></a>
+        <a href="https://wa.me/34123456789" target="_blank" aria-label="WhatsApp"><img src="https://img.icons8.com/fluency/28/whatsapp.png" alt="WhatsApp"></a>
       </div>
     </div>
   </section>
@@ -291,14 +289,12 @@
     <p>© 2025 EcoNova · Energía limpia para un futuro sostenible</p>
   </footer>
 
-  <!-- Chatbot EcoNova -->
+  <!-- Chatbot -->
   <div class="chatbot-container">
-    <div class="chatbot-header" onclick="toggleChat()">
-      💬 Asistente EcoNova
-    </div>
+    <div class="chatbot-header" onclick="toggleChat()">💬 Asistente EcoNova</div>
     <div class="chatbot-body" id="chatBody">
       <div class="chatbot-messages" id="chatMessages">
-        <div class="bot-message">👋 ¡Hola! Soy el asistente de EcoNova. ¿En qué puedo ayudarte?</div>
+        <div class="bot-message">👋 ¡Hola! Soy el asistente de EcoNova. ¿En qué puedo ayudarte hoy?</div>
       </div>
       <div class="chatbot-input">
         <input type="text" id="userInput" placeholder="Escribe tu mensaje...">
@@ -327,14 +323,22 @@
       const botMessage = document.createElement("div");
       botMessage.classList.add("bot-message");
 
-      if (userText.toLowerCase().includes("hola")) {
-        botMessage.textContent = "¡Hola! 😊 ¿Quieres saber más sobre nuestros servicios o proyectos?";
-      } else if (userText.toLowerCase().includes("servicios")) {
-        botMessage.textContent = "Ofrecemos soluciones solares, eólicas y sostenibles 🌞💨🌿";
-      } else if (userText.toLowerCase().includes("contacto")) {
-        botMessage.textContent = "Puedes contactarnos a través del formulario en la página 'Contacto' 📩";
+      const text = userText.toLowerCase();
+
+      if (text.includes("hola") || text.includes("buenas")) {
+        botMessage.textContent = "¡Hola! 😊 ¿Quieres saber más sobre nuestros servicios, proyectos o contacto?";
+      } else if (text.includes("servicio")) {
+        botMessage.textContent = "Ofrecemos soluciones solares, eólicas y sostenibles 🌞💨🌿 para empresas y hogares.";
+      } else if (text.includes("proyecto")) {
+        botMessage.textContent = "Tenemos proyectos en toda España impulsando energía limpia 💚. Puedes verlos en la sección 'Proyectos'.";
+      } else if (text.includes("contact")) {
+        botMessage.textContent = "Puedes contactarnos desde la página 'Contacto' o por WhatsApp 📱.";
+      } else if (text.includes("precio") || text.includes("coste")) {
+        botMessage.textContent = "Nuestros precios dependen del tipo de instalación y necesidades específicas. Podemos darte una estimación si nos contactas 💰.";
+      } else if (text.includes("gracias")) {
+        botMessage.textContent = "¡De nada! 😊 Si tienes más dudas, aquí estaré.";
       } else {
-        botMessage.textContent = "No estoy seguro de haber entendido 🤔. Prueba escribiendo 'servicios' o 'contacto'.";
+        botMessage.textContent = "No estoy seguro de haber entendido 🤔. Prueba escribiendo 'servicios', 'proyectos' o 'contacto'.";
       }
 
       messages.appendChild(botMessage);
@@ -345,6 +349,7 @@
 
 </body>
 </html>
+
 
 
 
